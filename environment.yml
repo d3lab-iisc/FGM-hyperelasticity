@@ -1,0 +1,19 @@
+# Conda environment for FGM-hyperelasticity (Windows, Linux, macOS).
+# Versions are pinned to the minor releases the code was tested with.
+# PyTorch is installed separately for your GPU and CUDA version, see README.md:
+#   conda env create -f environment.yml
+#   conda activate fgm
+#   pip install torch --index-url https://download.pytorch.org/whl/<cuda tag, e.g. cu128>
+name: fgm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy=1.26
+  - scipy=1.13
+  - pandas=2.2
+  - matplotlib=3.9
+  - seaborn=0.13
+  - scikit-learn=1.5
+  - pyvista=0.44
+  - pip

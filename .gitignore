@@ -1,0 +1,50 @@
+# ---------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local copies of the code before refactoring
+_legacy/
+
+# ---------------------------------------------------------------
+# Run outputs written into the dataset folders (main_data/)
+# Only the input files output_*.csv of each load step are tracked.
+# ---------------------------------------------------------------
+# per load step
+**/main_data/**/G_step.pt
+**/main_data/**/A1.csv
+**/main_data/**/A2.csv
+**/main_data/**/b1.csv
+**/main_data/**/b2.csv
+**/main_data/**/dof_x.csv
+**/main_data/**/dof_y.csv
+**/main_data/**/dof_z.csv
+**/main_data/**/features.csv
+**/main_data/**/EUCLIDvtkcheck.vtk
+**/main_data/**/step_output_noise.vtk
+# per dataset
+**/main_data/**/model_fgm_hex*.pt
+**/main_data/**/results/
+# noised copies of a dataset created by the driver
+**/main_data/*_CORR_noised_*/
+# experimental 2D datasets have no material file; the driver creates one with the predictions
+FGM-2D/main_data/Exp_*/**/output_elements_matProperty.csv
+
+# ---------------------------------------------------------------
+# Abaqus / Fortran build files
+# ---------------------------------------------------------------
+*.obj
+*.o
+*.mod
+
+# ---------------------------------------------------------------
+# OS and editor files
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
